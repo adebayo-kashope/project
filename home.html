@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGET</title>
+</head>
+<body>
+  <style>
+
+ 
+    /* Style for the navigation bar */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color:green;
+      padding: 10px 20px;
+    }
+
+    .navbar a {
+      color: silver;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .navbar a:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+
+    .navbar .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .navbar .menu {
+      display: flex;
+    }
+
+           .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: green;
+   color: white;
+   text-align: center;
+
+
+   
+}
+a{
+  text-decoration: none;
+  color: red;
+  padding: 10px;
+  
+}
+
+
+
+ 
+
+
+
+
+
+
+  </style>
+
+ <div class="container">
+        <div class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="proget.html">PROJECT</a>
+            <a href="blog.html">BLOG</a>
+            <a href="content.html">CONTACT</a>
+        
+        </div>
+  <div>
+        
+<style>
+
+
+ 
+</style>
+
+
+<div class="footer">
+  <p>briqslab<br>where competent programmer are brought up</p>
+    <button id="themeToggle">Toggle Theme</button>
+ 
+</div>  
+
+  <form action="">
+    <div>
+      <label for="name">name</label><p></p>
+      ADEBAYO KASHOPE <p></p>
+      <label for="biography">biography</label><p></p>
+      KASHOPE ADEBAYO is a backend programmer at briQslab cohort 0.<br>is among those who are always willing and able to work.
+      <br>his teacher was pastor favour is a great man .<p>
+      <a href="content.html">CONTACT US</a>
+      <a href="proget.html">OUR PROJECT </a>
+        
+      
+    </div>
+  </form>
+
+
+  
+
+  <style>
+/* Default Light Theme */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+  text-align: center;
+  padding: 0;
+}
+
+
+.profile {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+#themeToggle {
+  padding: 8px 12px;
+  border: none;
+  background: purple;
+  color: white;
+  border-radius: 5px;
+  /* cursor: pointer; */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #ffffff;
+}
+
+
+body.dark-mode .btn {
+  background: #2196f3;
+}
+
+body.dark-mode #themeToggle {
+  background: #2196f3;
+}
+</style>
+
+<script>
+// Toggle dark/light mode
+document.getElementById("themeToggle").addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+
+  // Save preference
+  if (document.body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Load saved theme on page load
+window.onload = function () {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+  }
+};
+</script>
+</body>
+</html>
