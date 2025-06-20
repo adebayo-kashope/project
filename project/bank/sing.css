@@ -1,0 +1,23 @@
+body{
+    width: 80%;
+    background-color:gray;
+
+}
+.container{
+    background-color: white;
+    width: 60%;
+    float: left;
+    
+}
+.email{
+    float: right;
+    
+}
+/* button{
+    background-color: gold;
+    color: blueviolet;
+    width: 70px;
+}
+a{
+    background-color: crimson;
+} */

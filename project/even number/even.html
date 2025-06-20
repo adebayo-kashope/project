@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="even.js"></script>
+    <link rel="stylesheet" href="even.css">
+</head>
+<body>
+    <div id="container">
+        <h1>evennumber</h1>
+        <form>
+            <input type="number" id="evennumber">
+            <h1 id="number"></h1>
+            <button onclick="even(event)">sumbit</button>
+
+            <div class="leap">    
+                <h1>leap year</h1>
+                <input type="number" id="year"> 
+                <h1 id="number2"></h1>
+                <button onclick="leapYear(event)">submit</button>
+            </div>
+        </form>
+
+        
+     <!-- <div>
+        <h1>sign</h1>
+
+       <form action="">
+
+            <input type="number" id="number"><br>
+
+            <select id="signs">
+                <option value=""></option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">x</option>
+                <option value="/">/</option>
+            </select>
+
+            <input type="number" id="number2"><br>
+
+            <input type="text" id="out" disabled>
+
+            <button onclick="calValue(event)">submit</button>
+
+       </form>
+     </div> -->
+<!-- 
+     <div>
+        <form action="">
+           <h1>prime number</h1>
+           <h1 id="result"></h1>
+           <input type="number" id="prime"><br>
+           <button onclick="primenumber (event)">submit</button>
+        </form>
+    </div> -->
+
+    <div>
+        <!-- <form>
+            <h1>formular</h1>
+            <input type="text" placeholder="shape" id="shape"><br>
+            <input type="number" placeholder="radius" id="radius"><br>
+            <input type="number" placeholder="lenght" id="lenght"><br>
+            <input type="number" id="height" placeholder="height"><br>
+            <input type="number" placeholder="breath" id="breath"><br>
+            <h1 id="answer"></h1>
+            <button onclick="formular(event)">submit</button> 
+        </form> -->
+
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .hidden { display: none; }
+    .input-group { margin-bottom: 10px; }
+  </style>
+
+  <h1>Area Calculator</h1>
+
+  <label for="shape">Choose a shape:</label>
+  <select id="shape" onchange="updateInputs()">
+    <option value=""></option>
+    <option value="circle">Circle</option>
+    <option value="triangle">Triangle</option>
+    <option value="square">Square</option>
+  </select>
+
+  <div id="inputs">
+    <!-- Input fields will be shown here -->
+  </div>
+
+  <button onclick="calculateArea()">Calculate Area</button>
+  <p id="result"></p>
+
+  <script>
+    function updateInputs() {
+      const shape = document.getElementById('shape').value;
+      const inputsDiv = document.getElementById('inputs');
+      let html = '';
+
+      if (shape === 'circle') {
+        html = '<div class="input-group"><label>Radius: <input type="number" id="radius"></label></div>';
+      } else if (shape === 'triangle') {
+        html = `
+          <div class="input-group"><label>Base: <input type="number" id="base"></label></div>
+          <div class="input-group"><label>Height: <input type="number" id="height"></label></div>
+        `;
+      } else if (shape === 'square') {
+        html = '<div class="input-group"><label>Side Length: <input type="number" id="side"></label></div>';
+      }
+
+      inputsDiv.innerHTML = html;
+    }
+
+    function calculateArea() {
+      const shape = document.getElementById('shape').value;
+      let area = 0;
+
+      if (shape === 'circle') {
+        const radius = parseFloat(document.getElementById('radius').value);
+        if (!isNaN(radius)) {
+          area = Math.PI * radius * radius;
+        }
+      } else if (shape === 'triangle') {
+        const base = parseFloat(document.getElementById('base').value);
+        const height = parseFloat(document.getElementById('height').value);
+        if (!isNaN(base) && !isNaN(height)) {
+          area = 0.5 * base * height;
+        }
+      } else if (shape === 'square') {
+        const side = parseFloat(document.getElementById('side').value);
+        if (!isNaN(side)) {
+          area = side * side;
+        }
+      }
+
+      document.getElementById('result5').innerText =
+        area ? `Area: ${area.toFixed(2)}` : 'Please enter valid input(s).';
+    }
+
+    // Initialize default inputs
+    updateInputs();
+  </script>
+
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .input-group { margin-bottom: 10px; }
+  </style>
+
+  <h1>Prime Number Checker</h1>
+
+  <div class="input-group">
+    <label>Enter a number:
+      <input type="number" id="number">
+    </label>
+  </div>
+
+  <button onclick="checkPrime()">Check</button>
+  <p id="result"></p>
+
+  <script>
+    function isPrime(n) {
+      if (n <= 1) return false;
+      if (n === 2) return true;
+      if (n % 2 === 0) return false;
+
+      for (let i = 3; i <= Math.sqrt(n); i += 2) {
+        if (n % i === 0) return false;
+      }
+      return true;
+    }
+
+    function checkPrime() {
+      const num = parseInt(document.getElementById('number').value);
+      const result = document.getElementById('result');
+
+      if (isNaN(num)) {
+        result.innerText = 'Please enter a valid number.';
+      } {
+        result.innerText = isPrime(num)
+           `${num} is a prime number.`
+           `${num} is not a prime number.`;
+      }
+      console.log(isPrime)
+    }
+  </script>
+
+
+
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .input-group { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Basic Calculator</h2>
+
+  <div class="input-group">
+    <label>First Number:
+      <input type="number" id="num1">
+    </label>
+  </div>
+
+  <div class="input-group">
+    <label>Operator:
+      <select id="operator">
+        <option></option>
+        <option value="+">+</option>
+        <option value="-">−</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="input-group">
+    <label>Second Number:
+      <input type="number" id="num2">
+    </label>
+  </div>
+
+  <button onclick="calculate()">Calculate</button>
+  <p id="result"></p>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+      const operator = document.getElementById('operator').value;
+      const result = document.getElementById('result');
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result.textContent = 'Please enter valid numbers.';
+        return;
+      }
+
+      let output;
+
+      switch (operator) {
+        case '+':
+          output = num1 + num2;
+          break;
+        case '-':
+          output = num1 - num2;
+          break;
+        case '*':
+          output = num1 * num2;
+          break;
+        case '/':
+          if (num2 === 0) {
+            result.textContent = 'Cannot divide by zero.';
+            return;
+          }
+          output = num1 / num2;
+          break;
+        default:
+          result.textContent = 'Invalid operator.';
+          return;
+      }
+
+      result.textContent = `Result: ${output}`;
+    }
+  </script>
+
+
+
+</body>
+</html>

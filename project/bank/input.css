@@ -1,0 +1,41 @@
+body{
+    width: 100%;
+    background-color: bisque;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.container{
+    width: 8%;
+    background-color: yellow;
+    padding: 10px;
+    border-radius: 15px;
+    color: black;
+    float: left;
+    text-align: center;
+}
+.form-board{
+    background-color: purple;
+    padding: 40px;
+    border-radius: 20px;
+    width: 25%;
+    float: left;
+    margin-left: 30px;
+    border-radius: 30px;
+
+}
+.name{
+    width: 96%;
+    padding: 15px;
+    background-color: silver;
+    color: white;
+}
+button{
+    color: white;
+    background-color: green;
+    width: 25%;
+    padding: 10px;
+}
+input{
+    border: 1px solid #888;
+}

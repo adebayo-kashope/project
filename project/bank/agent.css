@@ -1,0 +1,81 @@
+body{
+    width: 100%;
+    padding: 20px;
+    background-color: grey;
+}
+
+.container{
+    width: 40%;
+    background-color: white;
+
+}
+
+.agent{
+    float: left;
+}
+
+.type{
+    float: left;
+    margin-left: 20px;
+}
+
+.password{
+    float: left;
+    margin-left: 20px;
+    
+
+
+}
+    
+    
+
+.toll{
+    float: left;
+   margin-top: 10px;
+
+}
+.email{
+    float: left;
+    margin-left: 20px;
+    padding-top: 14px;
+}
+
+.website{
+    float: left;
+    margin-left: 20px;
+    padding-top: 15px;
+    
+}
+.company{
+    float: left;
+    
+
+}
+.office{
+    float: left;
+    padding-top: 15px;
+    margin-left: 30px;
+}
+.logo{
+    float: left;
+    margin-left: 30px;
+padding-top: 15px;
+}
+.continue{
+    background-color: green;
+    color: white;
+    float: right;
+}
+p{
+    float: left;
+}
+button{
+    background-color: silver;
+    color: white;
+    float: right  ;
+    margin-left: 10px;
+}
+
+input{
+    border: 1px solid #333;
+}

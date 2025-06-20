@@ -1,0 +1,19 @@
+body{
+    width: 50%;
+    background-color: grey;
+}
+
+
+.container{
+    
+    margin: 20% auto;
+    background-color: white;
+    float: left;
+
+}
+
+.email{
+    float: right;
+
+}
+
