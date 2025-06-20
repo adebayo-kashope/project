@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+<body>
+ 
+  <div class="navbar">
+      <a href="home.html">HOME</a>
+    <a href="proget.html">PROJECT</a>
+    <a href="blog.html">BLOG</a>
+    <a href="content.html">CONTACT</a>
+  
+    </div>
+  </div>
+      
+  <form action="" class="container">
+        <script>
+    function submite(event) {
+      event.preventDefault(); // stop page reload
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const country = document.getElementById("country").value;
+
+      if (name !== "" && email !== "" && phone !== "" && country !== "") {
+        alert(" successfully submitted");
+      } else {
+        alert("Please fill up the form to create an account");
+      }
+    }
+  </script>
+       CONTACT FORM
+  <div>
+    NAME:<input type="text" id="name" placeholder="Enter your name"required><P>
+
+   EMAIL:<input type="text" id="email" placeholder="@gmail"required><P>
+
+    PHONE:<input type="number" id="phone" placeholder="+234"required><P>
+
+    COUNTRY:<select id="country"required>
+      <option value="">-- Select Country --</option>
+      <option value="Canada">Canada</option>
+      <option value="China">China</option>
+      <option value="Nigeria">Nigeria</option>
+    </select>
+    
+    <p></p>
+     <button onclick="submite(event)">submite</button>
+     <button type="reset">reset</button>
+  </div>
+
+
+
+<div class="footer">
+  <p>briqslab<br>where competent programmer are brought up</p>
+    <button id="themeToggle">Toggle Theme</button>
+
+    
+
+
+
+    <script>
+    // Toggle dark/light mode
+    document.getElementById("themeToggle").addEventListener("click", function () {
+      document.body.classList.toggle("dark-mode");
+
+      // Save preference
+      if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    });
+
+    // Load saved theme on page load
+    window.onload = function () {
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+    };
+    </script>  
+      </form>
+    <a href="home.html">HOME</a>
+</body>
+</html> 
